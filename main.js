@@ -1,9 +1,15 @@
-import {makeElement, title} from "./utils.js";
 const root = document.querySelector('#root')
 const btnAdd = document.querySelector(".btn-add");
 const sum = document.querySelector(".show-sum")
 
 let total = 0
+
+const makeElement = (tag, attr_n, attr_v, content) => {
+    let output = document.createElement(tag)
+    output.setAttribute(attr_n, attr_v)
+    output.textContent = content
+    return output
+}
 
 function Counter(){
     let countNum = 0
